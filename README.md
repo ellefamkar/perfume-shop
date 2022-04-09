@@ -1,4 +1,4 @@
-# Frontend Mentor - FAQ accordion card solution
+# Perfume Shop by Elle Famkar (developed with tailwind and alpine js)
 
 ## Welcome to my project guys! 👋
  important point : remember to install node package and then command -> npm run dev so as to start the project
