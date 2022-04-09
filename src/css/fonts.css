@@ -1,0 +1,26 @@
+@font-face {
+   font-family: "Highclass";
+   src: url("/assets/fonts/highclass/ttf/High\ Class\ Demo.ttf");
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Ostrich";
+   src: url("/assets/fonts/ostrich/otf/OstrichSans-Medium.otf");
+   src: local("☺"), url("../../assets/fonts/ostrich/ttf/ostrich-medium.ttf") format("truetype");
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: "Ostrich";
+   src: url("/assets/fonts/ostrich/otf/ostrich-sans.sans-light.otf");
+   src: local("☺"), url("../../assets/fonts/ostrich/ttf/ostrich-regular.ttf") format("truetype");
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: "Ostrich";
+   src: url("/assets/fonts/ostrich/otf/ostrich-sans.sans-rounded-medium.otf");
+   src: local("☺"), url("../../assets/fonts/ostrich/ttf/ostrich-rounded-medium.ttf") format("truetype");
+   font-weight: 500;
+}

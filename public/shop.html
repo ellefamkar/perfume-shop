@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./build/tailwind.css" />
+      <title>Perfume | Shop</title>
+   </head>
+   <body class="bg-darkBg text-white font-sans p-3">
+      <!-- <h1 class="font-serif text-9xl text-soilish">heeeey there</h1> -->
+      <!-- app bar -->
+      <div class="flex md:hidden rounded-md border my-4 border-gray-900 shadow-gray-900 shadow-md items-center justify-between p-4">
+         <a href="#" class="font-serif text-5xl">Perfume</a>
+         <span class="text-5xl">Women</span>
+         <div class="w-8 h-8 rounded-full bg-white flex items-center cursor-pointer justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-darkGold stroke-black" fill="none" viewBox="0 0 24 24" stroke-width="2">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+         </div>
+      </div>
+      <!-- filter and categories  -->
+      <div class="flex md:hidden justify-between items-center gap-x-3 mb-4">
+         <div class="bg-lightGold text-white w-1/2 cursor-pointer flex p-2 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            <span class="ml-2 tracking-widest">Filter Product</span>
+         </div>
+         <div x-data="{isOpen : false}" class="relative bg-lightGold text-white w-1/2 cursor-pointer p-2 rounded">
+            <div @click="isOpen = !isOpen" class="flex">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+               </svg>
+               <span class="ml-2 tracking-widest">Choose category</span>
+            </div>
+            <div x-show="isOpen" class="overflow-hidden z-10 rounded-lg w-full absolute left-0 top-12 bg-white flex flex-col">
+               <a href="#" class="p-2 text-lightGold hover:bg-lightGold hover:text-white hover:tracking-widest">Something</a>
+               <a href="#" class="p-2 text-lightGold hover:bg-lightGold hover:text-white hover:tracking-widest">Something</a>
+               <a href="#" class="p-2 text-lightGold hover:bg-lightGold hover:text-white hover:tracking-widest">Something</a>
+            </div>
+         </div>
+      </div>
+
+      <!-- desktop navbar  -->
+      <nav class="hidden md:block mb-6 sticky top-0 z-10 rounded bg-darkBg border-2 border-gray-900 shadow-gray-900 shadow-md py-2 px-3">
+         <div class="flex items-center justify-between gap-x-3 container max-w-screen-2xl 2xl:mx-auto">
+            <div class="flex items-center">
+               <a class="font-serif text-5xl mx-4 cursor-pointer">Perfume</a>
+               <ul class="flex items-center gap-x-3">
+                  <li class="p-3">
+                     <a class="text-xl block hover:underline hover:underline-offset-1" href="#">Home</a>
+                  </li>
+                  <li class="p-3">
+                     <a class="text-xl block hover:underline hover:underline-offset-1" href="#">Shop</a>
+                  </li>
+                  <li class="p-3">
+                     <a class="text-xl block hover:underline hover:underline-offset-1" href="#">categories</a>
+                  </li>
+                  <li class="p-3">
+                     <a class="text-xl block hover:underline hover:underline-offset-1" href="#">contact</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="flex-1">
+               <div class="flex items-center justify-between rounded-md p-2">
+                  <span
+                     ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                     </svg>
+                  </span>
+                  <input class="w-full bg-transparent focus:outline-none" type="search" name="searchNav" placeholder="search here " id="" />
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- contetn  -->
+      <div class="container max-w-screen-2xl 2xl:mx-auto grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8">
+         <!-- sidebar -->
+         <div class="hidden md:block md:col-span-3 lg:col-span-2 row-span-2">
+            <div class="px-1 py-4 rounded border-2 border-gray-900 shadow-gray-900 shadow-lg sticky top-24 overflow-auto max-h-[calc(100vh_-_96px)]">
+               <!-- categories  -->
+               <div class="mb-5">
+                  <p class="text-xl font-bold tracking-widest mb-4 px-4">categories</p>
+                  <ul>
+                     <li class="cursor-pointer">
+                        <a href="#" class="flex items-center hover:text-lightGold hover:bg-white hover:bg-opacity-25 py-2 px-3 rounded-lg">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                           </svg>
+                           <span class="ml-2 tracking-wider"> Perfume</span>
+                        </a>
+                     </li>
+                     <li class="cursor-pointer">
+                        <a href="#" class="flex items-center hover:text-lightGold hover:bg-white hover:bg-opacity-25 py-2 px-3 rounded-lg">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                           </svg>
+                           <span class="ml-2 tracking-wider"> Edu Perfume </span>
+                        </a>
+                     </li>
+                     <li class="cursor-pointer">
+                        <a href="#" class="flex items-center hover:text-lightGold hover:bg-white hover:bg-opacity-25 py-2 px-3 rounded-lg">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                           </svg>
+                           <span class="ml-2 tracking-wider">Spray</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- desktop filters  -->
+               <div class="mb-4">
+                  <p class="text-xl font-bold tracking-widest mb-4 px-4">Choose</p>
+                  <!-- acc 1 -->
+                  <div x-data="{isOpenBrand: false}">
+                     <!-- header  -->
+                     <div @click="isOpenBrand = !isOpenBrand" class="hover:text-lightGold py-2 px-3 flex items-center justify-between cursor-pointer">
+                        <div class="flex items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-2">Brand</span>
+                        </div>
+                        <svg :class="isOpenBrand ? 'rotate-180' : ' ' " xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                     </div>
+                     <!-- content  -->
+                     <div x-show="isOpenBrand === true" class="flex flex-col gap-y-2 px-3">
+                        <label for="Versache" class="flex items-center cursor-pointer">
+                           <input checked type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="brand" id="Versache" />
+                           <span>Versache</span>
+                        </label>
+                        <label for="Perfume" class="flex items-center cursor-pointer">
+                           <input type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="brand" id="Perfume" />
+                           <span>Perfume</span>
+                        </label>
+                        <label for="1 million" class="flex items-center cursor-pointer">
+                           <input type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="brand" id="1 million" />
+                           <span>1 million</span>
+                        </label>
+                        <label for="others" class="flex items-center cursor-pointer">
+                           <input type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="brand" id="others" />
+                           <span>others</span>
+                        </label>
+                     </div>
+                  </div>
+                  <!-- acc 2 -->
+                  <div x-data="{isOpenCat: true}">
+                     <!-- header  -->
+                     <div @click="isOpenCat = !isOpenCat" class="hover:text-lightGold py-2 px-3 flex items-center justify-between cursor-pointer">
+                        <div class="flex items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-2">Category</span>
+                        </div>
+                        <svg :class="isOpenCat ? 'rotate-180' : ' ' " xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                     </div>
+                     <!-- content  -->
+                     <div x-show="isOpenCat === true" class="flex flex-col gap-y-2 px-3">
+                        <label for="Versache" class="flex items-center cursor-pointer">
+                           <input checked type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="cat" id="new" />
+                           <span>New version</span>
+                        </label>
+                        <label for="Perfume" class="flex items-center cursor-pointer">
+                           <input type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="cat" id="used" />
+                           <span>used ones</span>
+                        </label>
+                     </div>
+                  </div>
+                  <!-- acc 3 -->
+                  <div x-data="{isOpenColor: false}">
+                     <!-- header  -->
+                     <div @click="isOpenColor = !isOpenColor" class="hover:text-lightGold py-2 px-3 flex items-center justify-between cursor-pointer">
+                        <div class="flex items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-2">Color</span>
+                        </div>
+                        <svg :class="isOpenColor ? 'rotate-180' : ' ' " xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                     </div>
+                     <!-- content  -->
+                     <div x-show="isOpenColor === true" class="flex flex-col gap-y-2 px-3">
+                        <label for="Versache" class="flex items-center cursor-pointer">
+                           <input type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="color" id="navyblue" />
+                           <span>Navy blue</span>
+                        </label>
+                        <label for="Perfume" class="flex items-center cursor-pointer">
+                           <input type="checkbox" class="mr-2 form-checkbox rounded-md text-darkGold focus:ring-darkGold" name="color" id="something" />
+                           <span>something</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- sort section  -->
+         <div class="hidden md:block md:col-span-9 lg:col-span-10 rounded-lg bg-darkGold text-white">
+            <div x-data="{select : 1}" class="px-3 flex items-center gap-x-5">
+               <div class="cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                  </svg>
+               </div>
+               <button @click="select = 1" class="py-4 font-bold tracking-widest relative">
+                  <span>Most popular</span>
+                  <span x-show="select === 1" class="h-2 w-2 absolute -right-2 top-3 shadow-md bg-white rounded-full"></span>
+               </button>
+               <button @click="select = 2" class="py-4 font-bold tracking-widest relative">
+                  <span>Most expensive</span>
+                  <span x-show="select === 2" class="h-2 w-2 absolute -right-2 top-3 shadow-md bg-white rounded-full"></span>
+               </button>
+               <button @click="select = 3" class="py-4 font-bold tracking-widest relative">
+                  <span>Cheapest</span>
+                  <span x-show="select === 3" class="h-2 w-2 absolute -right-2 top-3 shadow-md bg-white rounded-full"></span>
+               </button>
+               <button @click="select = 4" class="py-4 font-bold tracking-widest relative">
+                  <span>Best Seller</span>
+                  <span x-show="select === 4" class="h-2 w-2 absolute -right-2 top-3 shadow-md bg-white rounded-full"></span>
+               </button>
+            </div>
+         </div>
+         <!-- products section -->
+         <div class="col-span-12 md:col-span-9 lg:col-span-10 p-2">
+            <div
+               x-data="{ 
+            products: [
+            { id: 1, title: 'ALLAMOUR', price: '1,330,000', imgSrc: '/assets/Images/products/perfume-1.png' },
+            { id: 2, title: 'ALLAMOUR', price: '2,330,000', imgSrc: '/assets/Images/products/perfume-2.png' },
+            { id: 3, title: 'ALLAMOUR', price: '3,330,000', imgSrc: '/assets/Images/products/perfume-3.png' },
+            { id: 4, title: 'ALLAMOUR', price: '4,330,000', imgSrc: '/assets/Images/products/perfume-4.png'},
+            { id: 5, title: 'ALLAMOUR', price: '5,330,000', imgSrc: '/assets/Images/products/perfume-5.png' },
+            { id: 6, title: 'ALLAMOUR', price: '6,330,000', imgSrc: '/assets/Images/products/perfume-6.png' },
+            { id: 7, title: 'ALLAMOUR', price: '7,330,000', imgSrc: '/assets/Images/products/perfume-7.png' },
+            { id: 8, title: 'ALLAMOUR', price: '8,330,000', imgSrc: '/assets/Images/products/perfume-8.png' },
+        ]}"
+               class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-9 lg:my-3"
+            >
+               <!-- single product -->
+               <template x-for="product in products" :key="product.id">
+                  <div>
+                     <div class="bg-gray-100 bg-opacity-10 shadow-inner shadow-white relative rounded-full p-1">
+                        <img :src="`${product.imgSrc}`" alt="perfume" />
+                     </div>
+                     <div class="p-2 flex flex-col mt-4 justify-center items-center">
+                        <div class="flex items-center justify-between w-full">
+                           <p x-text="product.title" class="font-bold tracking-widest md:text-lg"></p>
+                           <div x-data="{colorOne : 'slate'}" class="flex items-center">
+                              <button @click="colorOne = 'slate'" :class="colorOne === 'slate' ? 'bg-opacity-100' : ' '" class="w-6 h-6 flex items-center justify-center -m-1 bg-slate-300 bg-opacity-25 rounded-full cursor-pointer">
+                                 <svg x-show="colorOne === 'slate'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                 </svg>
+                              </button>
+                              <button @click="colorOne = 'lightPink'" :class="colorOne === 'lightPink' ? 'bg-opacity-100' : ' '" class="bg-opacity-25 w-6 h-6 flex items-center justify-center -m-1 bg-lightPink rounded-full cursor-pointer">
+                                 <svg x-show="colorOne === 'lightPink'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                 </svg>
+                              </button>
+                              <button @click="colorOne = 'lightCream'" :class="colorOne === 'lightCream' ? 'bg-opacity-100' : ' '" class="bg-opacity-25 w-6 h-6 flex items-center justify-center -m-1 bg-lightCream rounded-full cursor-pointer">
+                                 <svg x-show="colorOne === 'lightCream'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                 </svg>
+                              </button>
+                              <button @click="colorOne = 'darkGold'" :class="colorOne === 'darkGold' ? 'bg-opacity-100' : ' '" class="bg-opacity-25 w-6 h-6 flex items-center justify-center -m-1 bg-darkGold rounded-full cursor-pointer">
+                                 <svg x-show="colorOne === 'darkGold'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                 </svg>
+                              </button>
+                           </div>
+                        </div>
+                        <p x-text="product.price" class="tracking-widest underline underline-offset-1 my-3 text-xl"></p>
+                        <button class="bg-white flex items-center my-2 text-black py-1 px-7 rounded-tl-xl rounded-tr-sm rounded-br-xl rounded-bl-sm">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                           </svg>
+                           <span class="font-bold ml-2 md:text-lg"> add to cart</span>
+                        </button>
+                     </div>
+                  </div>
+               </template>
+            </div>
+         </div>
+      </div>
+      <!-- footer navigation  -->
+      <div class="md:hidden w-full bg-darkBg border border-gray-900 shadow-gray-900 shadow-md rounded-sm rounded-tr-md rounded-tl-md fixed bottom-0 right-0 left-0">
+         <nav>
+            <ul x-data="{activeButtonTab : 1 , isActive : 'text-darkGold' }" class="flex items-center justify-center gap-x-3 w-full">
+               <li :class="activeButtonTab === 1 ? isActive : ''" @click="activeButtonTab = 1" class="flex-auto">
+                  <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                     <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                     </span>
+                     <span class="ml-2 text-xl" x-show="activeButtonTab === 1"> Home </span>
+                  </a>
+               </li>
+               <li @click="activeButtonTab = 2" :class="activeButtonTab === 2 ? isActive : ''" class="flex-auto">
+                  <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                     <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                     </span>
+                     <span class="ml-2 text-xl" x-show="activeButtonTab === 2"> wish list </span>
+                  </a>
+               </li>
+               <li @click="activeButtonTab = 3" :class="activeButtonTab === 3 ? isActive : ''" class="flex-auto">
+                  <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                     <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                     </span>
+                     <span class="ml-2 text-xl" x-show="activeButtonTab === 3"> Shop </span>
+                  </a>
+               </li>
+               <li @click="activeButtonTab = 4" :class="activeButtonTab === 4 ? isActive : ''" class="flex-auto">
+                  <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                     <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                     </span>
+                     <span class="ml-2 text-xl" x-show="activeButtonTab === 4"> profile </span>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+      </div>
+
+      <script src="//unpkg.com/alpinejs" defer></script>
+   </body>
+</html>

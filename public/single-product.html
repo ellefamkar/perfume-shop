@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./build/tailwind.css" />
+      <title>Single Product</title>
+   </head>
+   <body>
+      <body class="bg-darkBg text-white font-sans p-3">
+         <!-- <h1 class="font-serif text-9xl text-soilish">heeeey there</h1> -->
+         <!-- app bar -->
+         <div class="flex md:hidden rounded-md border my-4 border-gray-900 shadow-gray-900 shadow-lg items-center justify-between p-4">
+            <a href="#" class="font-serif text-3xl md:text-5xl">Perfume</a>
+            <span class="text-3xl md:text-5xl">GUCCIE</span>
+            <div class="w-8 h-8 rounded-full bg-white flex items-center cursor-pointer justify-center">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-darkGold stroke-black" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+               </svg>
+            </div>
+         </div>
+         <!-- breadcrumb  -->
+         <div class="md:hidden p-2">
+            <div class="flex items-center gap-x-3 mb-4 text-xl text-gray-400">
+               <span class="tracking-wider"> perfume </span>
+               <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+               </span>
+               <span class="tracking-wider"> odor </span>
+               <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+               </span>
+               <span class="text-lightGold tracking-wider font-bold"> GUCCIE </span>
+            </div>
+         </div>
+         <!-- desktop navbar  -->
+         <nav class="hidden md:block mb-6 sticky top-0 z-10 rounded bg-darkBg border-2 border-gray-900 shadow-gray-900 shadow-md py-2 px-3">
+            <div class="flex items-center justify-between gap-x-3 container max-w-screen-2xl 2xl:mx-auto">
+               <div class="flex items-center">
+                  <a class="font-serif text-5xl mx-4 cursor-pointer">Perfume</a>
+                  <ul class="flex items-center gap-x-3">
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">Home</a>
+                     </li>
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">Shop</a>
+                     </li>
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">categories</a>
+                     </li>
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">contact</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="flex-1">
+                  <div class="flex items-center justify-between rounded-md p-2">
+                     <span
+                        ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                     </span>
+                     <input class="w-full bg-transparent focus:outline-none" type="search" name="searchNav" placeholder="search here " id="" />
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <!-- contetn  -->
+         <div class="container max-w-screen-2xl 2xl:mx-auto grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8">
+            <!-- sidebar -->
+            <div class="hidden md:block md:col-span-3 lg:col-span-2 row-span-2">
+               <div class="px-1 py-4 rounded border-2 border-gray-900 shadow-gray-900 shadow-lg sticky top-24 overflow-auto max-h-[calc(100vh_-_96px)]">
+                  <!-- categories  -->
+                  <div class="mb-5">
+                     <p class="text-xl font-bold tracking-widest mb-4 px-4">categories</p>
+                     <ul>
+                        <li class="cursor-pointer">
+                           <a href="#" class="flex items-center hover:text-lightGold hover:bg-white hover:bg-opacity-25 py-2 px-3 rounded-lg">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                              </svg>
+                              <span class="ml-2 tracking-wider"> Perfume</span>
+                           </a>
+                        </li>
+                        <li class="cursor-pointer">
+                           <a href="#" class="flex items-center hover:text-lightGold hover:bg-white hover:bg-opacity-25 py-2 px-3 rounded-lg">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              <span class="ml-2 tracking-wider"> Edu Perfume </span>
+                           </a>
+                        </li>
+                        <li class="cursor-pointer">
+                           <a href="#" class="flex items-center hover:text-lightGold hover:bg-white hover:bg-opacity-25 py-2 px-3 rounded-lg">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                 <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                              </svg>
+                              <span class="ml-2 tracking-wider">Spray</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- sort section  -->
+            <div class="hidden md:flex items-center md:col-span-9 lg:col-span-10 rounded-lg bg-darkGold text-white">
+               <div class="flex items-center gap-x-3 text-xl p-4">
+                  <span class="tracking-wider"> perfume </span>
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     </svg>
+                  </span>
+                  <span class="tracking-wider"> odor </span>
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     </svg>
+                  </span>
+                  <span class="text-black tracking-wider font-bold"> GUCCIE </span>
+               </div>
+            </div>
+            <!-- products section -->
+            <div class="col-span-12 md:col-span-9 lg:col-span-10 p-2 mt-3 mb-9 md:mb-3">
+               <div class="my-1 md:w-full">
+                  <!-- product details  -->
+                  <div class="flex flex-col md:flex-row md:w-auto items-center md:items-start">
+                     <!-- product images  -->
+                     <div class="flex flex-col w-4/5 md:w-2/4 lg:w-full max-w-xs">
+                        <div class="bg-gray-100 bg-opacity-10 shadow-inner shadow-white relative rounded-full p-1">
+                           <img class="w-full h-auto" src="/assets/Images/products/perfume-1.png" alt="perfume" />
+                        </div>
+                        <div class="hidden md:flex items-center justify-center mt-6 gap-x-2">
+                           <div class="w-20 h-20 cursor-pointer border border-opacity-50 border-gray-400 rounded-md">
+                              <img class="w-full h-full p-2"  src="/assets/Images/products/perfume-1.png" alt="perfume" />
+                           </div>
+                           <div class="w-20 h-20 cursor-pointer border border-opacity-50 border-gray-400 rounded-md">
+                              <img class="w-full h-full p-2"  src="/assets/Images/products/perfume-1.png" alt="perfume" />
+                           </div>
+                           <div class="w-20 h-20 cursor-pointer border border-opacity-50 border-gray-400 rounded-md">
+                              <img class="w-full h-full p-2"  src="/assets/Images/products/perfume-1.png" alt="perfume" />
+                           </div>
+                        </div>
+                     </div>
+                     <!-- product details  -->
+                     <div class="flex flex-col lg:flex-row md:w-2/4 md:flex-auto">
+                        <div class="p-2 flex flex-col mt-4 lg:w-2/4 md:mt-0 justify-center w-full md:w-auto items-center md:items-start md:justify-start md:ml-4">
+                           <h1 class="font-bold tracking-widest text-2xl text-center md:text-left">Guccie perfume rosegold edition</h1>
+                           <h2 class="font-thin tracking-widest text-gray-300 text-lg mb-4">2012 Edition for women</h2>
+                           <hr class="hidden md:block w-full mb-5 bg-gray-500 opacity-30" />
+                           <!-- pick color  -->
+                           <div class="w-3/4 flex justify-evenly items-center md:items-start md:justify-start mb-4">
+                              <p class="tracking-wider">Choose color :</p>
+                              <div x-data="{colorOne : 'slate'}" class="flex items-center md:ml-4">
+                                 <button @click="colorOne = 'slate'" :class="colorOne === 'slate' ? 'bg-opacity-100' : ' '" class="w-6 h-6 flex items-center justify-center -m-1 bg-slate-300 bg-opacity-25 rounded-full cursor-pointer">
+                                    <svg x-show="colorOne === 'slate'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                 </button>
+                                 <button @click="colorOne = 'lightPink'" :class="colorOne === 'lightPink' ? 'bg-opacity-100' : ' '" class="bg-opacity-25 w-6 h-6 flex items-center justify-center -m-1 bg-lightPink rounded-full cursor-pointer">
+                                    <svg x-show="colorOne === 'lightPink'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                 </button>
+                                 <button @click="colorOne = 'lightCream'" :class="colorOne === 'lightCream' ? 'bg-opacity-100' : ' '" class="bg-opacity-25 w-6 h-6 flex items-center justify-center -m-1 bg-lightCream rounded-full cursor-pointer">
+                                    <svg x-show="colorOne === 'lightCream'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                 </button>
+                                 <button @click="colorOne = 'darkGold'" :class="colorOne === 'darkGold' ? 'bg-opacity-100' : ' '" class="bg-opacity-25 w-6 h-6 flex items-center justify-center -m-1 bg-darkGold rounded-full cursor-pointer">
+                                    <svg x-show="colorOne === 'darkGold'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-black opacity-40" viewBox="0 0 20 20" fill="currentColor">
+                                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="flex flex-col mb-4">
+                              <ul class="list-disc tracking-wider marker:text-darkGold marker:text-lg list-inside">
+                                 <li>
+                                    <span class="mr-2">colors :</span>
+                                    <span>red, pink</span>
+                                 </li>
+                                 <li>
+                                    <span class="mr-2">guarantee :</span>
+                                    <span>18 month after purchase</span>
+                                 </li>
+                                 <li>
+                                    <span class="mr-2">sender :</span>
+                                    <span>tehran advert company </span>
+                                 </li>
+                                 <li>
+                                    <span class="mr-2">guarantee :</span>
+                                    <span>18 month after purchase</span>
+                                 </li>
+                                 <li>
+                                    <span class="mr-2">sender :</span>
+                                    <span>tehran advert company </span>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+
+                        <div class="lg:w-2/4 flex flex-col justify-center items-center md:items-start  md:w-auto md:ml-4 md:justify-start">
+                           <div class="flex flex-col gap-y-2 border border-gray-300 rounded-md p-3 md:p-2 shadow-md shadow-gray-900">
+                              <div class="flex items-center">
+                                 <span class="mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="mr-2">Seller :</span>
+                                 <span>Adam loran</span>
+                              </div>
+                              <div class="flex items-center">
+                                 <span class="mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="mr-2">guarantee :</span>
+                                 <span>18 month after purchase</span>
+                              </div>
+                              <div class="flex items-center">
+                                 <span class="mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                       <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                                       <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                                       />
+                                    </svg>
+                                 </span>
+                                 <span class="mr-2">sender :</span>
+                                 <span>tehran advert company </span>
+                              </div>
+                           </div>
+                           <p class="tracking-widest underline underline-offset-1 my-3 mt-4 text-3xl text-darkGold">$10,000,000.00</p>
+                           <button class="bg-white flex items-center my-2 text-black py-1 px-7 rounded-tl-xl rounded-tr-sm rounded-br-xl rounded-bl-sm">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                              </svg>
+                              <span class="font-bold ml-2 md:text-lg"> add to cart</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="my-8 text-center md:text-left p-4 md:p-2">
+                     <h1 class="text-4xl font-bold">description</h1>
+                     <p class="tracking-wider text-justify my-4 text-gray-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias ab saepe cum illo optio. Repellendus accusantium aperiam fuga molestiae neque cupiditate, omnis eos voluptas in et. Reprehenderit quas veritatis quae omnis aliquam numquam officia! Suscipit, dolores molestias. Harum nostrum itaque, dolorem nobis optio numquam id iusto officiis dolores sint assumenda. Tempora hic, reprehenderit dolores voluptas voluptatem tempore placeat, aperiam dolorem perspiciatis optio voluptatibus pariatur ipsam facere quia aut reiciendis veritatis iste aliquam aspernatur. Fugiat corrupti sit voluptates accusantium minus quaerat modi quasi dolore culpa quibusdam explicabo aut perferendis nisi dignissimos laborum, perspiciatis cupiditate. Repellat laborum rem nulla sunt labore omnis assumenda in suscipit! Alias excepturi, eveniet corrupti sint necessitatibus autem maiores veniam deleniti dignissimos rerum similique cumque quibusdam perspiciatis ratione officiis incidunt quas totam nulla odio! Atque ipsa quos cupiditate facere quam placeat libero veritatis laudantium, rem praesentium numquam laborum doloremque? Excepturi perspiciatis dolore eius quod laboriosam voluptatem laborum? Autem veniam ab nulla aut maxime molestias aperiam mollitia? Quos cumque in distinctio et veritatis eligendi saepe cupiditate, illum ullam aliquid repellendus expedita, voluptas consectetur ea numquam non nesciunt error deserunt impedit! Iure neque officia accusamus quibusdam non magnam, reiciendis quasi culpa ut veniam, autem dolores eligendi accusantium maxime alias molestiae soluta doloribus assumenda! Et quasi illum, illo alias dolores dolorem omnis possimus. Ab doloribus ullam reiciendis delectus, voluptatum quia fuga nihil velit minima deserunt dolores libero nesciunt totam autem, consectetur distinctio earum repudiandae aspernatur. Quisquam temporibus reiciendis qui modi doloribus quo laudantium sequi, tempora rem quod expedita rerum magni fugit fugiat! Iste explicabo sunt libero rerum, commodi optio facilis iure, asperiores quaerat saepe officia voluptatibus at molestias ad possimus nesciunt suscipit ab deleniti modi unde aliquid temporibus autem soluta perferendis. Explicabo magnam neque, unde dolorum tenetur dolorem minima at enim nobis nisi, in rem hic, fugit error. Libero, corrupti unde.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- footer navigation  -->
+         <div class="md:hidden mt-6 w-full bg-darkBg border border-gray-900 shadow-gray-900 shadow-md rounded-sm rounded-tr-md rounded-tl-md fixed bottom-0 right-0 left-0">
+            <nav>
+               <ul x-data="{activeButtonTab : 1 , isActive : 'text-darkGold' }" class="flex items-center justify-center gap-x-3 w-full">
+                  <li :class="activeButtonTab === 1 ? isActive : ''" @click="activeButtonTab = 1" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 1"> Home </span>
+                     </a>
+                  </li>
+                  <li @click="activeButtonTab = 2" :class="activeButtonTab === 2 ? isActive : ''" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 2"> wish list </span>
+                     </a>
+                  </li>
+                  <li @click="activeButtonTab = 3" :class="activeButtonTab === 3 ? isActive : ''" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 3"> Shop </span>
+                     </a>
+                  </li>
+                  <li @click="activeButtonTab = 4" :class="activeButtonTab === 4 ? isActive : ''" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 4"> profile </span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+
+         <script src="//unpkg.com/alpinejs" defer></script>
+      </body>
+   </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./build/tailwind.css" />
+      <title>Perfume | Cart</title>
+   </head>
+   <body>
+      <body class="bg-darkBg text-white font-sans p-3">
+         <!-- mobile app bar -->
+         <div class="flex md:hidden rounded-md border my-4 border-gray-900 shadow-gray-900 shadow-lg items-center justify-between p-4">
+            <a href="#" class="font-serif text-3xl md:text-5xl">Perfume</a>
+            <span class="text-3xl md:text-5xl">cart</span>
+            <div class="w-8 h-8 rounded-full bg-white flex items-center cursor-pointer justify-center">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-darkGold stroke-black" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+               </svg>
+            </div>
+         </div>
+         <!-- mobile breadcrumb  -->
+         <div class="md:hidden p-2">
+            <div class="flex items-center gap-x-3 mb-4 text-xl text-gray-400">
+               <a href="#" class="tracking-wider"> home </a>
+               <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+               </span>
+               <a href="#" class="tracking-wider"> products </a>
+               <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+               </span>
+               <span class="text-lightGold tracking-wider font-bold"> cart </span>
+            </div>
+         </div>
+         <!-- desktop navbar  -->
+         <nav class="hidden md:block mb-3 sticky top-0 z-10 rounded bg-darkBg border-2 border-gray-900 shadow-gray-900 shadow-md py-2 px-3">
+            <div class="flex items-center justify-between gap-x-3 container max-w-screen-2xl 2xl:mx-auto">
+               <div class="flex items-center">
+                  <a class="font-serif text-5xl mx-4 cursor-pointer">Perfume</a>
+                  <ul class="flex items-center gap-x-3">
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">Home</a>
+                     </li>
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">Shop</a>
+                     </li>
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">categories</a>
+                     </li>
+                     <li class="p-3">
+                        <a class="text-xl block hover:underline hover:underline-offset-1" href="#">contact</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="flex-1">
+                  <div class="flex items-center justify-between rounded-md p-2">
+                     <span
+                        ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                     </span>
+                     <input class="w-full bg-transparent focus:outline-none" type="search" name="searchNav" placeholder="search here " id="" />
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <!-- content  -->
+         <div class="container px-0 py-2 w-full max-w-screen-2xl 2xl:mx-auto">
+            <!-- desktop sort section  -->
+            <div class="hidden md:flex items-center border-b border-opacity-50 border-b-gray-400 text-white">
+               <div class="flex items-center gap-x-3 text-xl p-4">
+                  <span class="tracking-wider"> home </span>
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     </svg>
+                  </span>
+                  <span class="tracking-wider"> products </span>
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                     </svg>
+                  </span>
+                  <span class="text-darkGold tracking-wider font-bold"> cart </span>
+               </div>
+            </div>
+            <!-- products section -->
+            <div class="flex flex-col md:gap-x-4 md:flex-row p-2 mt-0 md:mt-3 mb-9 md:mb-3">
+               <div
+                  class="my-1 flex flex-col gap-y-4 md:flex-1"
+                  x-data="{ 
+                    products: [
+                    { id: 1, title: 'perfume for women', price: '$1,404,000.00', imgSrc: '/assets/Images/products/perfume-1.png' },
+                    { id: 2, title: 'perfume for women', price: '$2,404,000.00' , imgSrc: '/assets/Images/products/perfume-2.png'},
+                    { id: 3, title: 'perfume for women', price: '$3,404,000.00' , imgSrc: '/assets/Images/products/perfume-3.png'},
+                    { id: 4, title: 'perfume for women', price: '$4,404,000.00' , imgSrc: '/assets/Images/products/perfume-4.png'},
+                    { id: 5, title: 'perfume for women', price: '$5,404,000.00' , imgSrc: '/assets/Images/products/perfume-5.png'},
+                    { id: 6, title: 'perfume for women', price: '$6,404,000.00' , imgSrc: '/assets/Images/products/perfume-1.png'},
+                 ]}" >
+                  <template x-for="product in products" :key="product.id">
+                     <!-- product items  -->
+                     <div class="flex shadow-lg shadow-slate-900 rounded-md px-2 py-3 justify-between gap-x-3">
+                        <div class="w-20 h-20 lg:w-32 lg:h-32 cursor-pointer border border-opacity-50 border-gray-400 rounded-md">
+                           <img class="p-2" :src="`${product.imgSrc}`" alt="perfume" />  
+                           <!-- `images/posts/${post.image}` -->
+                        </div>
+                        <div class="flex-1 text-xl lg:text-2xl flex flex-col justify-between">
+                           <p x-text="product.title" class="tracking-wider"></p>
+                           <p x-text="product.price" class="tracking-wider"></p>
+                        </div>
+                        <div class="flex flex-col text-sm justify-between items-end">
+                           <a href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:w-6 lg:h-6 stroke-darkGold fill-darkGold shadow-md" viewBox="0 0 20 20">
+                                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                           </a>
+                           <div class="flex items-center gap-x-1">
+                              <span class="cursor-pointer border rounded-md border-gray-600 p-1">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:w-5 lg:h-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                 </svg>
+                              </span>
+                              <span class="mx-2 lg:text-2xl">1</span>
+                              <span class="cursor-pointer border rounded-md border-gray-600 p-1">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:w-5 lg:h-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                                 </svg>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </template>
+               </div>
+               <div class="my-3 md:my-1 w-full md:w-2/5 lg:w-1/4">
+                  <div class="text-darkBg p-3 border bg-white rounded-md">
+                     <div class="flex justify-between mb-3 text-xl font-bold tracking-wider">
+                        <span>total price</span>
+                        <span>$12,000,200.00 </span>
+                     </div>
+                     <div class="flex justify-between mb-3 text-xl font-bold tracking-wider">
+                        <span>discount code</span>
+                        <div class="border flex text-center rounded-md overflow-hidden">
+                           <input type="text" class="w-16 max-w-[150px] py-0.5 px-1 text-center focus:outline-none" placeholder="12345" />
+                           <button class="bg-darkGold py-0.5 px-2 tracking-wider font-bold">submit</button>
+                        </div>
+                     </div>
+                     <div class="flex justify-between text-xl font-bold tracking-wider">
+                        <span>Discount</span>
+                        <span>$9,000,000.00 </span>
+                     </div>
+                     <hr class="my-3" />
+                     <div class="flex justify-between text-xl font-bold tracking-wider">
+                        <span>Final price</span>
+                        <span>$13,000,000.00 </span>
+                     </div>
+                     <button class="p-2 bg-darkGold text-lg font-bold w-full flex items-center justify-center rounded-md my-3">
+                        <span class="mr-3">process purchasing</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </button>
+                     <button class="p-2 text-darkGold text-lg font-bold w-full border border-darkGold flex items-center justify-center rounded-md my-3">
+                        <span class="mr-3">cancel purchase</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- footer navigation  -->
+         <div class="md:hidden mt-6 w-full bg-darkBg border border-gray-900 shadow-gray-900 shadow-md rounded-sm rounded-tr-md rounded-tl-md fixed bottom-0 right-0 left-0">
+            <nav>
+               <ul x-data="{activeButtonTab : 1 , isActive : 'text-darkGold' }" class="flex items-center justify-center gap-x-3 w-full">
+                  <li :class="activeButtonTab === 1 ? isActive : ''" @click="activeButtonTab = 1" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 1"> Home </span>
+                     </a>
+                  </li>
+                  <li @click="activeButtonTab = 2" :class="activeButtonTab === 2 ? isActive : ''" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 2"> wish list </span>
+                     </a>
+                  </li>
+                  <li @click="activeButtonTab = 3" :class="activeButtonTab === 3 ? isActive : ''" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 3"> Shop </span>
+                     </a>
+                  </li>
+                  <li @click="activeButtonTab = 4" :class="activeButtonTab === 4 ? isActive : ''" class="flex-auto">
+                     <a href="#" class="hover:text-darkGold w-full flex p-3 items-center justify-center">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                           </svg>
+                        </span>
+                        <span class="ml-2 text-xl" x-show="activeButtonTab === 4"> profile </span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+
+         <script src="//unpkg.com/alpinejs" defer></script>
+      </body>
+   </body>
+</html>
