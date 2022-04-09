@@ -1,6 +1,7 @@
 # Frontend Mentor - FAQ accordion card solution
 
 ## Welcome to my project guys! 👋
+ important point : remember to install node package and then command -> npm run dev so as to start the project
 
 ## Table of contents
 
