@@ -33,12 +33,12 @@ In his project you should be able to:
 
 ### Screenshot
 
-![](./assets/images/github-images/perfume-desktop.png)
-![](./assets/images/github-images/perfume-mobile-image.png)
+![](/assets/images/github-images/perfume-desktop.png)
+![](/assets/images/github-images/perfume-mobile-image.png)
 
 ### Links
 
--  Live Site URL: [FAQ accordion card solution](https://ellefamkar.github.io/perfume-shop/)
+-  Live Site URL: [mini perfume shop](https://ellefamkar.github.io/perfume-shop/)
 
 ## My process
 
