@@ -33,8 +33,8 @@ In his project you should be able to:
 
 ### Screenshot
 
-![](/assets/images/github-images/perfume-desktop.png)
-![](/assets/images/github-images/perfume-mobile-image.png)
+![](./assets/Images/github-images/perfume-desktop.png)
+![](./assets/Images/github-images/perfume-mobile-image.png)
 
 ### Links
 
